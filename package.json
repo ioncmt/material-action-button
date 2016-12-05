@@ -1,0 +1,17 @@
+{
+  "name": "material-action-button",
+  "version": "1.0.0",
+  "description": "Create a material design floating button",
+  "main": "ion-action-button.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "material",
+    "design",
+    "floating",
+    "button"
+  ],
+  "author": "Fernando",
+  "license": "ISC"
+}
