@@ -28,6 +28,7 @@ Options:
 The example bellow shows all the options
 
 * removeOnStateChange:If set to false, the element won't be removed from the dom automatically after view change.
+* hasTab: if true it will move the button on top of the tabbar
 * mainAction: is an object that will represent the button when the menu is closed
 * buttons: will be the list of button displayed, we will detailled the content of a button object, if not provided only the main action will be active
 
@@ -104,3 +105,29 @@ CSS Customisation
 
 ion-action-button comes with a less file that is generating the css file
 @containerBackgroungColor for the background color of the backdrop when menu is open
+
+Contribute
+-----------------
+
+```
+npm install
+bower install
+```
+
+Javascript is located inside material-action-button.js and css in _ion-action-button.less
+
+```
+gulp;gulp watch
+```
+
+Release
+
+```
+gulp bump;gulp
+```
+
+Add to git repository
+
+```
+npm publish
+```

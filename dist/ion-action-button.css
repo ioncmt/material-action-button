@@ -71,9 +71,9 @@
   border-radius: 100px;
   align-items: center;
   justify-content: center;
-  background: blue;
+  background: #2475ac;
+  color: #fff;
   position: fixed;
-  bottom: 20px;
   padding-top: 0px;
   padding-bottom: 1px;
   right: 20px;
@@ -159,10 +159,13 @@
   justify-content: flex-start;
   position: fixed;
   z-index: 9999;
-  padding-bottom: 90px;
   padding-right: 17px;
   position: absolute;
   top: 0;
+}
+.action-button-small.destructive {
+  background: #d0021b;
+  color: #fff;
 }
 .action-button-small-show.action-button-small-container {
   display: flex;
@@ -176,10 +179,10 @@
   display: none;
 }
 .action-button-small {
-  height: 40px;
-  width: 40px;
+  height: 45px;
+  width: 45px;
   border: none;
-  border-radius: 100px;
+  border-radius: 23px;
   display: flex;
   align-items: center;
   justify-content: center;
