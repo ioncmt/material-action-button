@@ -35,8 +35,6 @@ The example bellow shows all the options
 Button and MainAction are following the same structure
 
 * icon: Uses ionicons icons, but you can provide your own set with CSS class.
-* backgroundColor: the color of the background.
-* textColor: color of the text inside the button.
 * onClick: function that will be called when element is clicked.
 * label: displayed in front of the menu element (Not took into account for the main Action).
 * letter: will replace the icon if you don't have.
@@ -49,8 +47,7 @@ Full exemple:
   var actionButton = $actionButton.create({
     mainAction: {
       icon: 'ion-android-create',//Uses ionicons icons.
-      backgroundColor: 'blue',
-      textColor: ' white',
+      closeIcon: 'ion-android-close',//Uses ionicons icons.
       onClick: function() {
         console.log('clicked main BUTTON');
       }
@@ -66,8 +63,6 @@ Full exemple:
 
       icon: 'ion-android-pin',
       label: 'Find',
-      backgroundColor: 'red',
-      iconColor: 'white',
       onClick: function() {
         console.log('clicked pin');
       }
@@ -123,11 +118,21 @@ gulp;gulp watch
 Release
 
 ```
-gulp bump;gulp
+gulp release
 ```
 
 Add to git repository
 
 ```
+cd dist/
 npm publish
 ```
+
+Add to bower
+
+```
+bower register material-action-button
+git tag -a v1.0.4 -m "my version 1.0.4"
+git push origin --tags
+```
+

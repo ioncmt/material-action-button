@@ -71,7 +71,7 @@
   border-radius: 100px;
   align-items: center;
   justify-content: center;
-  background: #2475ac;
+  background: #00a9e0;
   color: #fff;
   position: fixed;
   padding-top: 0px;
@@ -153,13 +153,13 @@
   display: none;
   height: 100%;
   width: 100%;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(0, 0, 0, 0.4);
   flex-direction: column-reverse;
   align-items: flex-end;
   justify-content: flex-start;
   position: fixed;
   z-index: 9999;
-  padding-right: 17px;
+  padding-right: 13px;
   position: absolute;
   top: 0;
 }
@@ -189,30 +189,30 @@
   z-index: 9999;
   box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
   margin: 10px;
-  color: #767673;
-  background-color: #fafafa;
+  color: #00a9e0;
+  background-color: #fff;
 }
 .action-button-small--label {
   background-color: white;
   border-radius: 4px;
   font-weight: bold;
-  padding: 2px 10px;
+  padding: 8px 16px;
   display: block;
   font-size: 14px;
-  color: grey;
+  color: #00a9e0;
   box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.2);
-  margin-right: 20px;
+  margin-right: 0;
 }
-.action-button-small--icon {
-  font-size: 24px;
-  line-height: 24px;
+.action-button-small .action-button-small--icon {
+  font-size: 35px;
+  line-height: 20px;
 }
 .action-button-small--icon__label {
   font-weight: normal;
   opacity: 1;
   text-transform: capitalize;
-  font-size: 24px;
-  line-height: 24px;
+  font-size: 35px;
+  line-height: 20px;
 }
 .action-button-small-show .action-button-small {
   animation-duration: 0.15s;

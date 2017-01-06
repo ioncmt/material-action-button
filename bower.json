@@ -1,9 +1,10 @@
 {
   "name": "material-action-button",
+  "version": "1.0.3",
   "description": "Create a material design floating button",
   "main": [
     "dist/ion-action-button.js",
-    "dist/src/ion-action-button.less"
+    "src/ion-action-button.less",
     "dist/ion-action-button.css"
   ],
   "authors": [
@@ -18,7 +19,6 @@
   ],
   "homepage": "",
   "ignore": [
-    "**/.*",
     "node_modules",
     "bower_components",
     "test",

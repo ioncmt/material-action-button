@@ -134,7 +134,7 @@
   justify-content: flex-start;
   position: fixed;
   z-index: 9999;
-  padding-right: 17px; 
+  padding-right: @buttonContainerPaddingRight; 
   position:absolute;
   top:0;
 }
@@ -156,8 +156,8 @@
   display: none; }
 
 .action-button-small {
-  height: 45px;
-  width: 45px;
+  height: @buttonSmallSize;
+  width: @buttonSmallSize;
   border: none;
   border-radius: 23px;
   display: flex;
@@ -166,31 +166,34 @@
   z-index: 9999;
   box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
   margin: 10px;
-  color: #767673;
-  background-color: #fafafa; 
+  color: @iconLabelTextColor;
+  background-color: @iconLabelBackgroundColor;
 }
 
 .action-button-small--label {
   background-color: white;
   border-radius: 4px;
   font-weight: bold;
-  padding: 2px 10px;
+  padding: @labelPadding;
   display: block;
   font-size: 14px;
-  color: grey;
+  color: @iconLabelTextColor;
   box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.2);
-  margin-right: 20px; }
+  margin-right: @labelToIconMargin;
+}
 
-.action-button-small--icon {
-  font-size: 24px;
-  line-height: 24px; }
+.action-button-small .action-button-small--icon {
+  font-size: @iconButtonFontSize;
+  line-height: @iconButtonLineHeight; 
+}
 
 .action-button-small--icon__label {
   font-weight: normal;
   opacity: 1;
   text-transform: capitalize;
-  font-size: 24px;
-  line-height: 24px; }
+  font-size: @iconButtonFontSize;
+  line-height: @iconButtonLineHeight; 
+}
 
 .action-button-small-show .action-button-small {
   animation-duration: 0.15s; }
@@ -205,4 +208,5 @@
   flex-wrap: nowrap;
   display: flex;
   animation-duration: 5s;
-  animation-fill-mode: forwards; }
+  animation-fill-mode: forwards; 
+}

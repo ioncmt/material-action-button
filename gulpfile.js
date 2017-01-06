@@ -9,7 +9,6 @@ var runSequence = require('run-sequence').use(gulp);
 var templateCache = require('gulp-angular-templatecache');
 var useref = require('gulp-useref');
 var bump = require('gulp-bump');
-var gulpCopy = require('gulp-copy');
 var deletefile = require('gulp-delete-file');
 
 var DESTINATION = './dist/';
@@ -19,7 +18,6 @@ var paths = {
   compress: 'dist/ion-action-button.js',
   template: 'src/template.html',
   html: 'src/index.html',
-  copy: ['package.json', 'bower.json', 'src/_ion-action-button.less'],
   clear: ['dist/material-action-button.css', 'dist/templates.js', 'dist/index.html']
 }
 
@@ -31,7 +29,7 @@ gulp.task('default', function() {
   runSequence.apply(runSequence, defaultTask);
 });
 gulp.task('release', function() {
-  runSequence.apply(runSequence, defaultTask.concat(['bump', 'copy', 'clear']));
+  runSequence.apply(runSequence, defaultTask.concat(['bump', 'clear']));
 });
 
 gulp.task('watch', function() {
@@ -40,12 +38,6 @@ gulp.task('watch', function() {
     runSequence('default');
   });
 });
-
-gulp.task('copy', function(cb) {
-  pump([gulp.src(paths.copy),
-    gulpCopy(DESTINATION, {})
-  ], cb);
-})
 
 gulp.task('less', function(cb) {
   pump([
