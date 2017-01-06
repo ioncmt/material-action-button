@@ -96,7 +96,7 @@ gulp.task('clear', function(cb) {
 })
 
 gulp.task('bump', function() {
-  pump([gulp.src('./package.json'),
+  pump([gulp.src('./*.json'),
     bump(),
     gulp.dest('./')
   ]);
