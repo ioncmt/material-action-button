@@ -91,7 +91,7 @@ function actionButtonFactory($rootScope, $compile, $ionicBody, $animate, $ionicT
 
         if (data.type === 'secondary') {
           if (scope.options.buttons[data.index].onClick) {
-            return scope.options.buttons[data.index].onClick(data.ngEvent);
+            return scope.options.buttons[data.index].onClick(data.ngEvent, data.index);
           }
           return;
         }

@@ -29,7 +29,7 @@ function actionButtonFactory(t, n, o, e, i) {
         }))
       }
       if ("secondary" !== t.type);
-      else if (a.options.buttons[t.index].onClick) return a.options.buttons[t.index].onClick(t.ngEvent)
+      else if (a.options.buttons[t.index].onClick) return a.options.buttons[t.index].onClick(t.ngEvent, t.index)
     }, a.show = function() {
       e.addClass(l, "button-active").then(function() {
         if (s = !0, c = angular.element(l[0].getElementsByClassName("action-button")), u = angular.element(l[0].getElementsByClassName(
