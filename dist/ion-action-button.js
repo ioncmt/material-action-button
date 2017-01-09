@@ -1,5 +1,3 @@
-"use strict";
-
 function actionButtonFactory(t, n, o, e, i) {
   function a(i) {
     var a = t.$new(!0),
@@ -62,10 +60,9 @@ function actionButtonFactory(t, n, o, e, i) {
     create: a
   }
 }
-var module = angular.module("$actionButton", ["ngAnimate"]);
-module.factory("$actionButton", ["$rootScope", "$compile", "$ionicBody", "$animate", "$ionicTabsDelegate",
-  actionButtonFactory
-]), module.component("materialActionButton", {
+angular.module("$actionButton", ["ngAnimate"]).factory("$actionButton", ["$rootScope", "$compile", "$ionicBody",
+  "$animate", "$ionicTabsDelegate", actionButtonFactory
+]).component("materialActionButton", {
   templateUrl: "template.html",
   bindings: {
     options: "<",
