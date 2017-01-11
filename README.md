@@ -132,7 +132,7 @@ Add to bower
 
 ```
 bower register material-action-button
-git tag -a v1.0.4 -m "Version 1.0.4: What was changed"
+git tag -a v1.0.7 -m "Version 1.0.7: Dependency to ionic moved to dev"
 git push origin --tags
 ```
 

@@ -204,14 +204,14 @@
   margin-right: 0;
 }
 .action-button-small .action-button-small--icon {
-  font-size: 35px;
+  font-size: 28px;
   line-height: 20px;
 }
 .action-button-small--icon__label {
   font-weight: normal;
   opacity: 1;
   text-transform: capitalize;
-  font-size: 35px;
+  font-size: 28px;
   line-height: 20px;
 }
 .action-button-small-show .action-button-small {
