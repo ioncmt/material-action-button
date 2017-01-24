@@ -12,7 +12,7 @@ PACKAGE_VERSION=$(cat package.json \
 git add -u;
 git commit --no-verify
 git push
-commitMessage = "$(git log -1 --pretty=%B)"
+commitMessage="$(git log -1 --pretty=%B)"
 git tag -a v$PACKAGE_VERSION -m "Version $PACKAGE_VERSION:$commitMessage"
 git push origin --tags
 
