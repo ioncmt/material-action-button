@@ -100,6 +100,19 @@ CSS Customisation
 
 ion-action-button comes with a less file that is generating the css file
 @containerBackgroungColor for the background color of the backdrop when menu is open
+@mainButtonBackgroungColor background color of the main menu button
+@mainButtonTextColor text color of the main button
+@destructiveTextColor text color for destructive button
+@destructiveBackgroundColor background color of the destructive button
+@iconLabelTextColor text color of the sub item icon menu
+@buttonSmallSize size of the sub item icon menu
+@labelToIconMargin margin between the icon and the text
+@iconLabelBackgroundColor background color of the label
+@iconButtonFontSize font size of the sub item
+@iconButtonLineHeight line height of the button
+@buttonContainerPaddingRight padding on the right of the button
+@labelPadding label padding (top right bottom left)
+@mainButtonZIndex z-index of the button
 
 Contribute
 -----------------
@@ -124,7 +137,6 @@ gulp release
 Add to git repository
 
 ```
-cd dist/
 npm publish
 ```
 
