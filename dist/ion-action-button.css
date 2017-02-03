@@ -227,7 +227,7 @@
   display: flex;
   animation-duration: 5s;
   animation-fill-mode: forwards;
-  width: 97%;
+  max-width: 97%;
 }
 
 /*# sourceMappingURL=maps/material-action-button.css.map */
