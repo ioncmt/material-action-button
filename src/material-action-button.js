@@ -111,9 +111,10 @@ function actionButtonFactory($rootScope, $compile, $ionicBody, $animate, $ionicT
       });
     };
     //auto remove when state changes
-    $rootScope.$on('$stateChangeSuccess', function() {
+    var unSubscribeStateChangeEvent = $rootScope.$on('$stateChangeStart', function() {
       if (scope.options.removeOnStateChange) {
         scope.removeButton();
+        unSubscribeStateChangeEvent();
         return;
       }
     });
