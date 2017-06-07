@@ -38,6 +38,7 @@ Button and MainAction are following the same structure
 * onClick: function that will be called when element is clicked.
 * label: displayed in front of the menu element (Not took into account for the main Action).
 * letter: will replace the icon if you don't have.
+* id: gets set as the id of the resulting element.
 
 Full exemple:
 
@@ -48,6 +49,7 @@ Full exemple:
     mainAction: {
       icon: 'ion-android-create',//Uses ionicons icons.
       closeIcon: 'ion-android-close',//Uses ionicons icons.
+      id: 'action-main',
       onClick: function() {
         console.log('clicked main BUTTON');
       }
@@ -63,12 +65,14 @@ Full exemple:
 
       icon: 'ion-android-pin',
       label: 'Find',
+      id: 'action-find',
       onClick: function() {
         console.log('clicked pin');
       }
     }, {
       //shows a label and icon defaults to first letter of label
       label: 'Ben Sparrow',
+      id: 'action-open-ben',
       onClick: function() {
         console.log('clicked O');
       }
@@ -76,6 +80,7 @@ Full exemple:
       //shows a label and icon is the letter configured
       label: 'Max Lynx',
       letter: 'O',
+      id: 'action-open-max',
       onClick: function() {
         console.log('clicked Testing');
       }
