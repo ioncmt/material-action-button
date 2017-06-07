@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 	<title>Sample Material Floating Button</title>
-	
+
 	<link href="../components/ionic/release/css/ionic.min.css" rel="stylesheet">
 	<!-- build:css ion-action-button.css -->
 	<link rel="stylesheet" type="text/css" href="../dist/material-action-button.css">
@@ -54,23 +54,27 @@
 			removeOnStateChange:false,
 			mainAction: {
 		      icon: 'ion-android-create',//Uses ionicons icons.
-		      closeIcon:'ion-android-close'
+		      closeIcon:'ion-android-close',
+		      id: 'action-main'
 		  },
 		  buttons: [{
 		  	icon: 'ion-android-pin',
 		  	label: 'Find',
+		  	id: 'action-find',
 		  	destructive: true,
 		  	onClick: function() {
 		  		console.log('clicked pin');
 		  	}
 		  }, {
 		  	label: 'Jack Sparrow',
+		  	id: 'action-open-jack',
 		  	onClick: function() {
 		  		console.log('clicked O');
 		  	}
 		  }, {
 		  	label: 'Max Lynx',
 		  	letter: 'O',
+		  	id: 'action-open-max',
 		  	onClick: function() {
 		  		console.log('clicked Testing');
 		  	}

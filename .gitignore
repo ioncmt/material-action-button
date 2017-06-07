@@ -1,3 +1,4 @@
 /node_modules/
 /components/
 .bowerrc
+/bower_components
