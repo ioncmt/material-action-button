@@ -22,6 +22,11 @@ function actionButtonFactory($rootScope, $compile, $ionicBody, $animate, $ionicT
     var secondaryButtonsContainer;
     //append to the body
     $ionicBody.append(element);
+    var remove = function() {
+      visible = false;
+      scope.$destroy();
+      element.remove();
+    };
     /**
      * Button remove
      */
@@ -30,12 +35,14 @@ function actionButtonFactory($rootScope, $compile, $ionicBody, $animate, $ionicT
         return;
       }
       scope.removed = true;
-      return $animate.addClass(mainButtonElement, 'action-button-hide').then(function() {
-        visible = false;
-        scope.$destroy();
-        element.remove();
-        return;
-      });
+      if (mainButtonElement) {
+        return $animate.addClass(mainButtonElement, 'action-button-hide').then(function() {
+          remove();
+          return;
+        });
+      } else {
+        remove();
+      }
     };
     /**
      * Button clicked
@@ -111,9 +118,10 @@ function actionButtonFactory($rootScope, $compile, $ionicBody, $animate, $ionicT
       });
     };
     //auto remove when state changes
-    $rootScope.$on('$stateChangeSuccess', function() {
+    var unSubscribeStateChangeEvent = $rootScope.$on('$stateChangeStart', function() {
       if (scope.options.removeOnStateChange) {
         scope.removeButton();
+        unSubscribeStateChangeEvent();
         return;
       }
     });
