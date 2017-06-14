@@ -1,8 +1,8 @@
 <div ng-animate-children="true">
 	<div class="action-button-small-container" ng-click="$ctrl.closeMenu({type: 'main', backgroundClick: true})" ng-style="{'padding-bottom':$ctrl.options.menuBottom}">
-		<div class="action-button-small-container--individual" ng-repeat="button in $ctrl.options.buttons" ng-click="$ctrl.buttonClicked({ngEvent:$event, type: 'secondary', index: $index})">
+		<div class="action-button-small-container--individual" ng-repeat="button in $ctrl.options.buttons" ng-attr-id="{{button.id}}" ng-click="$ctrl.buttonClicked({ngEvent:$event, type: 'secondary', index: $index})">
 			<span class="action-button-small--label" ng-if="button.label">{{button.label}}</span>
-			<button ng-attr-id="{{button.id}}" class="action-button-small" ng-class="{'destructive': button.destructive}">
+			<button class="action-button-small" ng-class="{'destructive': button.destructive}">
 				<i class="action-button-small--icon icon" ng-class="button.icon"><span class="action-button-small--icon__label" ng-if="!button.icon">{{button.letter || button.label[0]}}</span></i>
 			</button>
 		</div>
