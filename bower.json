@@ -1,6 +1,6 @@
 {
   "name": "material-action-button",
-  "version": "1.0.20",
+  "version": "1.0.21-cmt",
   "description": "Create a material design floating button",
   "main": [
     "dist/ion-action-button.js",
@@ -24,7 +24,7 @@
     "test",
     "tests"
   ],
-  "devDependencies": {
+  "dependencies": {
     "ionic": "^1.3.2"
   }
 }
